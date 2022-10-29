@@ -1,0 +1,30 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+#home {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: transparent;
+
+  .btn {
+    letter-spacing: 2px;
+  }
+}
+
+#main-title {
+  color: $primary-color;
+  font-size: $big-font;
+  z-index: 1;
+  @include respond(phone) {
+    font-size: 1.8rem;
+    width: 90%;
+  }
+}
+
+canvas {
+  position: absolute;
+}

@@ -1,0 +1,27 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.title {
+  font-size: $huge-font;
+  text-align: center;
+  padding: 40px;
+  font-weight: bold;
+  margin: 0px;
+  @include respond(phone) {
+    font-size: $big-font;
+  }
+}
+
+h1 {
+  color: $primary-color;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: all 0.25s;
+  &:hover {
+    cursor: pointer;
+    color: #b2fff1;
+  }
+}

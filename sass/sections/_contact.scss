@@ -1,0 +1,68 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+#contact {
+  height: auto;
+  background: linear-gradient(90deg, #00b998 9.76%, #77a4bd 89.76%);
+  opacity: 0.9;
+
+  .title {
+    text-align: right;
+    margin-right: 100px;
+    color: $dark-gray;
+
+    @include respond(tab-land) {
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+  }
+}
+
+.send-msg__container {
+  height: auto;
+  padding-bottom: 20px;
+}
+
+.send-msg {
+  color: $dark-gray;
+  border-color: $dark-gray;
+  border-radius: 0px;
+  width: auto;
+  height: auto;
+  &:hover {
+    background-color: $dark-gray;
+  }
+}
+
+input,
+textarea {
+  font-family: $main-font;
+  font-size: 1.2em;
+  padding: 10px;
+  background-color: $dark-gray;
+  height: 35px;
+  width: 40%;
+  color: #eee;
+  border-radius: 10px;
+  margin: 10px;
+  @include respond(tab-land) {
+    width: 80%;
+  }
+}
+
+#msg {
+  box-sizing: border-box;
+  padding: 20px;
+  margin-bottom: 30px;
+  min-height: 40vh;
+  min-width: 41%;
+  max-width: 41%;
+  @include respond(tab-land) {
+    min-width: 82%;
+    max-width: 82%;
+  }
+}

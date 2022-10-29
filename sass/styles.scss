@@ -1,0 +1,14 @@
+@use '../sass/abstracts/variables';
+@use '../sass/abstracts/mixins';
+
+@use '../sass/base/base';
+@use '../sass/base/typography';
+
+@use '../sass/components/nav';
+@use '../sass/components/buttons';
+
+@use '../sass/sections/home';
+@use '../sass/sections/about';
+@use '../sass/sections/portfolio';
+@use '../sass/sections/contact';
+@use '../sass/sections/footer';

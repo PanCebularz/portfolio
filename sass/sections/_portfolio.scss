@@ -1,0 +1,90 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.gradient-bg {
+  background: linear-gradient(90deg, #00b998 9.76%, #77a4bd 89.76%);
+  opacity: 0.9;
+}
+
+#portfolio {
+  height: 120vh;
+  background: $dark-gray;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+  .title {
+    color: $primary-color;
+    text-align: right;
+    margin-right: 100px;
+
+    @include respond(tab-land) {
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  .gallery {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      width: 80%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 30px;
+      @include respond(tab-port) {
+        width: 100%;
+      }
+    }
+    .details {
+      width: 40%;
+      @include respond(phone) {
+        width: 80%;
+        padding: 20px 0;
+      }
+    }
+    .project-title {
+      font-size: 2.2em;
+      margin: 0;
+    }
+
+    img {
+      height: 200px;
+      float: left;
+      margin-right: 30px;
+      @include respond(phone) {
+        width: 80%;
+        height: auto;
+      }
+    }
+
+    .project-desc {
+      color: #eee;
+      font-size: 1.1rem;
+      text-align: justify;
+    }
+
+    .project-btn {
+      font-size: 1.2em;
+      border: 2px solid $primary-color;
+      padding: 10px;
+      margin-right: 20px;
+    }
+
+    .project-src {
+      font-size: 1.2em;
+    }
+  }
+
+  @include respond(tab-land) {
+    clip-path: none;
+    height: auto;
+  }
+}

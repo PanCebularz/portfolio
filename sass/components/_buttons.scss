@@ -1,0 +1,48 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.btn {
+  border: 3px solid $primary-color;
+  font-size: $md-font;
+  padding: 20px 40px;
+  color: $primary-color;
+  font-family: $main-font;
+  background: none;
+  transition: all 0.25s;
+  position: relative;
+
+  @include respond(phone) {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+  }
+
+  &:hover {
+    color: $dark-gray;
+    cursor: pointer;
+  }
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background-color: $primary-color;
+    height: 100%;
+    width: 0;
+    transition: all 0.25s;
+    z-index: -1;
+  }
+  &:hover::after {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.send-msg {
+  &:hover {
+    color: $primary-color;
+    cursor: pointer;
+  }
+  &::after {
+    background-color: $dark-gray;
+  }
+}
