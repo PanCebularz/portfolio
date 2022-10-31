@@ -477,17 +477,19 @@ canvas {
   font-display: swap;
 }
 #about {
-  height: 100vh;
   background: linear-gradient(90deg, #00b998 9.76%, #77a4bd 89.76%);
   opacity: 0.9;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  height: auto;
+  padding-bottom: 150px;
 }
 #about .title {
   color: #1c1c1c;
 }
 @media (max-width: 75em) {
   #about {
+    padding-bottom: 50px;
     -webkit-clip-path: none;
             clip-path: none;
     height: auto;
@@ -615,10 +617,11 @@ canvas {
 }
 
 #portfolio {
-  height: 120vh;
+  height: auto;
+  padding-bottom: 200px;
   background: #1c1c1c;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 #portfolio .title {
   color: #00b998;
@@ -694,6 +697,7 @@ canvas {
 }
 @media (max-width: 75em) {
   #portfolio {
+    padding-bottom: 50px;
     -webkit-clip-path: none;
             clip-path: none;
     height: auto;

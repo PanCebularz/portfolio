@@ -7,9 +7,10 @@
 }
 
 #portfolio {
-  height: 120vh;
+  height: auto;
+  padding-bottom: 200px;
   background: $dark-gray;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 
   .title {
     color: $primary-color;
@@ -84,6 +85,7 @@
   }
 
   @include respond(tab-land) {
+    padding-bottom: 50px;
     clip-path: none;
     height: auto;
   }
