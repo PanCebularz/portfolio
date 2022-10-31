@@ -18,6 +18,7 @@
 #main-title {
   color: $primary-color;
   font-size: $big-font;
+  font-weight: 600;
   z-index: 1;
   @include respond(phone) {
     font-size: 1.8rem;

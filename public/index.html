@@ -121,16 +121,24 @@
         <form action="">
             <ul>
                 <li>
-                    <input type="text" name="name" id="name" placeholder="Name: John Smith" required>
+                    <label for="name">Name <span id="req">*</span></label>
+                    <br>
+                    <input type="text" name="name" id="name" placeholder="John Smith" required>
                 </li>
                 <li>
-                    <input type="email" name="email" id="email" placeholder="E-mail: egzample@mail.com" required>
+                    <label for="email">E-mail <span id="req">*</span></label>
+                    <br>
+                    <input type="email" name="email" id="email" placeholder="example@mail.com" required>
                 </li>
                 <li>
-                    <input type="text" id="subject" placeholder="Subject: Cooperation" name="" id="" required>
+                    <label for="subject">Subject <span id="req">*</span></label>
+                    <br>
+                    <input type="text" id="subject" placeholder="Cooperation" name="" id="" required>
                 </li>
                 <li>
-                    <textarea id="msg" placeholder="Message: Hello, what's up?" required></textarea>
+                    <label for="msg">Message <span id="req">*</span></label>
+                    <br>
+                    <textarea name='msg' id="msg" placeholder="Hello, what's up?" required></textarea>
                 </li>
                 <li>
                     <div class="send-msg__container">
@@ -178,7 +186,8 @@
                     <!--[if lt IE 9]><em>Email</em><![endif]-->
                 </a></li>
         </ul>
-        <p><a href="#home">website.com</a></p>
+
+        <p id="copyrights">&copy; 2022 olivierzagorski.com</p>
     </footer>
 
     <script type="module" src="index.js"></script>

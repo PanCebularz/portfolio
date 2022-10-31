@@ -19,6 +19,7 @@
 
   ul {
     list-style-type: none;
+    padding-left: 0;
   }
 }
 
@@ -42,12 +43,12 @@ input,
 textarea {
   font-family: $main-font;
   font-size: 1.2em;
-  padding: 10px;
   background-color: $dark-gray;
   height: 35px;
   width: 40%;
   color: #eee;
   border-radius: 10px;
+  padding: 10px;
   margin: 10px;
   @include respond(tab-land) {
     width: 80%;
@@ -56,13 +57,25 @@ textarea {
 
 #msg {
   box-sizing: border-box;
-  padding: 20px;
-  margin-bottom: 30px;
   min-height: 40vh;
   min-width: 41%;
   max-width: 41%;
   @include respond(tab-land) {
     min-width: 82%;
     max-width: 82%;
+  }
+}
+
+label {
+  display: inline-block;
+  width: 40%;
+  text-align: left;
+  font-weight: 600;
+  @include respond(tab-land) {
+    width: 80%;
+  }
+
+  span {
+    color: red;
   }
 }
